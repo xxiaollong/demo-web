@@ -12,10 +12,10 @@ module.exports = {
     assetsPublicPath: '/',
     proxyTable: {
       '/api': {
-        target: 'http://localhost:8888',//后端接口地址
-        changeOrigin: true,//是否允许跨越
+        target: 'http://192.168.1.98:8080',//后端接口地址
+        changeOrigin: true, //是否允许跨越
         pathRewrite: {
-            '^/api': '/',//重写,
+            '^/api': '/', //重写,
         }
       }
     },
@@ -23,7 +23,7 @@ module.exports = {
     // Various Dev Server settings
     host: 'localhost', // can be overwritten by process.env.HOST
     port: 9527, // can be overwritten by process.env.PORT, if port is in use, a free one will be determined
-    autoOpenBrowser: true,
+    autoOpenBrowser: false,
     errorOverlay: true,
     notifyOnErrors: false,
     poll: false, // https://webpack.js.org/configuration/dev-server/#devserver-watchoptions-

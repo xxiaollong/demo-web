@@ -56,7 +56,7 @@ export const asyncRouterMap = [
   {
     path: '/system',
     component: Layout,
-    meta: { perm:'m:sys', title: '系统', icon: 'chart' },
+    meta: { perm: 'm:sys', title: '系统', icon: 'chart' },
     children: [
       {
         path: 'user_manage',
@@ -68,14 +68,14 @@ export const asyncRouterMap = [
         path: 'role_manage',
         name: 'role_manage',
         component: _import('_system/role/index'),
-        meta: { perm: 'm:sys:role', title: '角色管理', icon: 'chart', noCache: true },
+        meta: { perm: 'm:sys:role', title: '角色管理', icon: 'chart', noCache: true }
       },
       {
         hidden: true,
         path: 'role_manage/:roleId/assign_perm',
         name: 'role_manage_assign_perm',
         component: _import('_system/role/assign_perm'),
-        meta: { hiddenTag: true , title: '角色授权'},
+        meta: { hiddenTag: true, title: '角色授权' }
       },
       {
         path: 'perm_manage',
@@ -83,7 +83,7 @@ export const asyncRouterMap = [
         component: _import('_system/perm/index'),
         meta: { perm: 'm:sys:perm', title: '权限管理', icon: 'chart', noCache: true }
 
-      },
+      }
     ]
   },
   {
@@ -93,11 +93,9 @@ export const asyncRouterMap = [
       path: 'index',
       name: 'menu1',
       component: _import('menu/menu1'),
-      meta: { perm:'m:menu1', title: '菜单1', icon: 'icon' }
+      meta: { perm: 'm:menu1', title: '菜单1', icon: 'icon' }
     }]
   },
-
-
   {
     path: '/menu2',
     component: Layout,
@@ -105,7 +103,7 @@ export const asyncRouterMap = [
       path: 'index',
       name: 'menu2',
       component: _import('menu/menu2'),
-      meta: { perm:'m:menu2', title: '菜单2', icon: 'icon' }
+      meta: { perm: 'm:menu2', title: '菜单2', icon: 'icon' }
     }]
   },
 
@@ -113,25 +111,23 @@ export const asyncRouterMap = [
     path: '/menu3',
     component: Layout,
     meta: {
-      perm:'m:menu3',
+      perm: 'm:menu3',
       title: '菜单3',
       icon: 'chart'
     },
     children: [
-      { path: 'menu3_1', component: _import('menu/menu3_1'), name: 'menu3_1', meta: { perm:'m:menu3:1', title: '菜单3-1', icon: 'chart', noCache: true }},
-      { path: 'menu3_2', component: _import('menu/menu3_2'), name: 'menu3_2', meta: { perm:'m:menu3:2', title: '菜单3-2', icon: 'chart', noCache: true }},
-      { path: 'menu3_3', component: _import('menu/menu3_3'), name: 'menu3_3', meta: { perm:'m:menu3:3', title: '菜单3-3', icon: 'chart', noCache: true }}
+      { path: 'menu3_1', component: _import('menu/menu3_1'), name: 'menu3_1', meta: { perm: 'm:menu3:1', title: '菜单3-1', icon: 'chart', noCache: true }},
+      { path: 'menu3_2', component: _import('menu/menu3_2'), name: 'menu3_2', meta: { perm: 'm:menu3:2', title: '菜单3-2', icon: 'chart', noCache: true }},
+      { path: 'menu3_3', component: _import('menu/menu3_3'), name: 'menu3_3', meta: { perm: 'm:menu3:3', title: '菜单3-3', icon: 'chart', noCache: true }}
     ]
   },
-
-
   {
     path: '/menu4',
     name: 'menu4',
     component: Layout,
     redirect: '/menu4/menu4_1/a',
     meta: {
-      perm:'m:menu4',
+      perm: 'm:menu4',
       title: '菜单4',
       icon: 'example'
     },
@@ -142,14 +138,14 @@ export const asyncRouterMap = [
         component: _import('menu/menu4_1/index'),
         redirect: '/menu4/menu4_1/a',
         meta: {
-          perm:'m:menu4:1',
+          perm: 'm:menu4:1',
           title: '菜单4-1',
           icon: 'table'
         },
         children: [
-          { path: 'a', name: 'menu4_1_a', component: _import('menu/menu4_1/a'), meta: { perm:'m:menu4:1:a', title: '菜单4-1-a' }},
-          { path: 'b', name: 'menu4_1_b', component: _import('menu/menu4_1/b'), meta: { perm:'m:menu4:1:b', title: '菜单4-1-b' }},
-          { path: 'c', name: 'menu4_1_c', component: _import('menu/menu4_1/c'), meta: { perm:'m:menu4:1:c', title: '菜单4-1-c' }}
+          { path: 'a', name: 'menu4_1_a', component: _import('menu/menu4_1/a'), meta: { perm: 'm:menu4:1:a', title: '菜单4-1-a' }},
+          { path: 'b', name: 'menu4_1_b', component: _import('menu/menu4_1/b'), meta: { perm: 'm:menu4:1:b', title: '菜单4-1-b' }},
+          { path: 'c', name: 'menu4_1_c', component: _import('menu/menu4_1/c'), meta: { perm: 'm:menu4:1:c', title: '菜单4-1-c' }}
         ]
       },
       { path: 'menu4/menu4_2', name: 'menu4_2', icon: 'tab', component: _import('menu/menu4_2/index'), meta: {perm:'m:menu4:2', title: '菜单4-2' }}
